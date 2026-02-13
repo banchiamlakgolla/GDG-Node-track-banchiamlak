@@ -1,0 +1,1080 @@
+{
+  "info": {
+    "_postman_id": "23cb97cd-9048-4a67-b56e-92b335a04b54",
+    "name": "E-commerce backend - mini project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50378886"
+  },
+  "item": [
+    {
+      "name": "GET-All product",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "GET-All product",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "326"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"146-YcRgIvBFO8Lda73/fi5WkjU6fH8\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 01:58:03 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"_id\": \"698d28eb24951211212cedd1\",\n        \"name\": \"Phone\",\n        \"price\": 500,\n        \"stock\": 10,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"698d2fbd24951211212cedd4\",\n        \"name\": \"Laptop\",\n        \"price\": 1200,\n        \"stock\": 5,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"698d30fd24951211212cedd6\",\n        \"name\": \"Tablet\",\n        \"price\": 300,\n        \"stock\": 7,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"698d327e24951211212cedd8\",\n        \"name\": \"Laptop\",\n        \"price\": 900,\n        \"stock\": 5,\n        \"__v\": 0\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Create product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"price\": 900,\r\n  \"stock\": 5\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create product",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"price\": 280,\r\n  \"stock\": 10\r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/products/698d3df413fb8a6ceba357c8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products",
+                "698d3df413fb8a6ceba357c8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "137"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"89-KbLx5KwJYE4Slz1Vxre6rwxaqxM\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 02:48:47 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698d3df413fb8a6ceba357c8\",\n    \"name\": \"Tablet\",\n    \"description\": \"Android tablet\",\n    \"price\": 280,\n    \"stock\": 10,\n    \"category\": \"Electronics\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get-product by ID",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Get-product by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/products/698d28eb24951211212cedd1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products",
+                "698d28eb24951211212cedd1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "80"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"50-+CvgzV6MeF0TsM/WVhEyMEC7NmI\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 02:40:47 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698d28eb24951211212cedd1\",\n    \"name\": \"Phone\",\n    \"price\": 500,\n    \"stock\": 10,\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"price\": 280,\r\n  \"stock\": 10\r\n}\r\n\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/products/698d3df413fb8a6ceba357c8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "products",
+            "698d3df413fb8a6ceba357c8"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update product",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"price\": 300,\r\n  \"stock\": 10\r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/products/698d3df413fb8a6ceba357c8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products",
+                "698d3df413fb8a6ceba357c8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "137"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"89-YDGplV7Tk4vvr1XqYYmMq/hLO80\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 12:59:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698d3df413fb8a6ceba357c8\",\n    \"name\": \"Tablet\",\n    \"description\": \"Android tablet\",\n    \"price\": 300,\n    \"stock\": 10,\n    \"category\": \"Electronics\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/products/698d2fbd24951211212cedd4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "products",
+            "698d2fbd24951211212cedd4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete product",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/products/698d2fbd24951211212cedd4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products",
+                "698d2fbd24951211212cedd4"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "31"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1f-Zkgaox/LmBaRs1Ofkuc8bu8COvo\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 13:04:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Product not found\"\n}"
+        },
+        {
+          "name": "Delete product",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/products/698d30fd24951211212cedd6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products",
+                "698d30fd24951211212cedd6"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "29"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1d-SUOjrQM9v/ZnWfd464qBypgAgyE\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 13:05:29 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Product deleted\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET – View Cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "cart"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET – View Cart",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/cart",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "193"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c1-mulgnXGDRJkQ87MuTS3v0HvqH9I\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:14:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698dd0691b2ab049c3b532d4\",\n    \"items\": [\n        {\n            \"productId\": {\n                \"_id\": \"698d28eb24951211212cedd1\",\n                \"name\": \"Phone\",\n                \"price\": 500,\n                \"stock\": 10,\n                \"__v\": 0\n            },\n            \"quantity\": 3,\n            \"_id\": \"698dd11e1b2ab049c3b532d9\"\n        }\n    ],\n    \"__v\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "POST – Add to cart",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"productId\": \"698d28eb24951211212cedd1\",\r\n  \"quantity\": 2\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "cart"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "POST – Add to cart",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"productId\": \"698d28eb24951211212cedd1\",\r\n  \"quantity\": 2\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/cart",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "139"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"8b-Z7/y2TmjNP+Gthtepy8mFxFprSA\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 13:14:29 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698dd0691b2ab049c3b532d4\",\n    \"items\": [\n        {\n            \"productId\": \"698d28eb24951211212cedd1\",\n            \"quantity\": 8,\n            \"_id\": \"698dd11e1b2ab049c3b532d9\"\n        }\n    ],\n    \"__v\": 1\n}"
+        },
+        {
+          "name": "POST – Add to cart",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"productId\": \"698d3df413fb8a6ceba357c8\",\r\n  \"quantity\": 2\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/cart",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "139"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"8b-v+Gk8iwziAGTeuJCgHQHWMqRcQM\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:42:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698dd0691b2ab049c3b532d4\",\n    \"items\": [\n        {\n            \"productId\": \"698d3df413fb8a6ceba357c8\",\n            \"quantity\": 2,\n            \"_id\": \"698e02ef84150b4925a4aa31\"\n        }\n    ],\n    \"__v\": 5\n}"
+        }
+      ]
+    },
+    {
+      "name": "PUT-Update the cart",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"productId\": \"698d28eb24951211212cedd1\",\r\n  \"quantity\": 3\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "cart"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "PUT-Update the cart",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"productId\": \"698d28eb24951211212cedd1\",\r\n  \"quantity\": 3\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/cart",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "139"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"8b-spe+vt6LfH8nkGa/t/F4EGceXcw\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:04:27 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698dd0691b2ab049c3b532d4\",\n    \"items\": [\n        {\n            \"productId\": \"698d28eb24951211212cedd1\",\n            \"quantity\": 3,\n            \"_id\": \"698dd11e1b2ab049c3b532d9\"\n        }\n    ],\n    \"__v\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "DELETE – Remove cart item",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/cart/698d28eb24951211212cedd1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "cart",
+            "698d28eb24951211212cedd1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "DELETE – Remove cart item",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/cart/698d28eb24951211212cedd1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "cart",
+                "698d28eb24951211212cedd1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "53"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"35-33CUugC6VX6x5vzz/PBQdmTZ8jE\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:18:27 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698dd0691b2ab049c3b532d4\",\n    \"items\": [],\n    \"__v\": 2\n}"
+        }
+      ]
+    },
+    {
+      "name": "POST – Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"customerName\": \"Selam Girum\",\r\n  \"address\": \"Addis Ababa\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "POST – Create Order",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"customerName\": \"Selam Girum\",\r\n  \"address\": \"Addis Ababa\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "300"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"12c-iuXCktsfrqCbTwNH6TumN+XhTYs\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:43:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"items\": [\n        {\n            \"productId\": {\n                \"_id\": \"698d3df413fb8a6ceba357c8\",\n                \"name\": \"Tablet\",\n                \"description\": \"Android tablet\",\n                \"price\": 300,\n                \"stock\": 8,\n                \"category\": \"Electronics\",\n                \"__v\": 0\n            },\n            \"quantity\": 2,\n            \"_id\": \"698e02ef84150b4925a4aa31\"\n        }\n    ],\n    \"total\": 600,\n    \"_id\": \"698e031384150b4925a4aa37\",\n    \"createdAt\": \"2026-02-12T16:42:59.450Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET – All orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET – All orders",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "384"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"180-9tXO/21BhOrPU6KFSnaC23BeH5A\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:50:45 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"_id\": \"698dfeb884150b4925a4aa25\",\n        \"items\": [\n            {\n                \"productId\": \"698d327e24951211212cedd8\",\n                \"quantity\": 4,\n                \"_id\": \"698dfe1884150b4925a4aa1f\"\n            }\n        ],\n        \"total\": 3600,\n        \"createdAt\": \"2026-02-12T16:24:24.083Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"698e031384150b4925a4aa37\",\n        \"items\": [\n            {\n                \"productId\": \"698d3df413fb8a6ceba357c8\",\n                \"quantity\": 2,\n                \"_id\": \"698e02ef84150b4925a4aa31\"\n            }\n        ],\n        \"total\": 600,\n        \"createdAt\": \"2026-02-12T16:42:59.450Z\",\n        \"__v\": 0\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "GET – Order by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/orders/698dfeb884150b4925a4aa25",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "orders",
+            "698dfeb884150b4925a4aa25"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET – Order by id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/orders/698dfeb884150b4925a4aa25",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "orders",
+                "698dfeb884150b4925a4aa25"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "191"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"bf-hOqzRbUab45u7DZXruwcKSmAQ6M\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 12 Feb 2026 16:59:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"698dfeb884150b4925a4aa25\",\n    \"items\": [\n        {\n            \"productId\": \"698d327e24951211212cedd8\",\n            \"quantity\": 4,\n            \"_id\": \"698dfe1884150b4925a4aa1f\"\n        }\n    ],\n    \"total\": 3600,\n    \"createdAt\": \"2026-02-12T16:24:24.083Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    }
+  ]
+}

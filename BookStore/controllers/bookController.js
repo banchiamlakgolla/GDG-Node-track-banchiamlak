@@ -1,6 +1,6 @@
 let books = [
-  { id: 1, title: "Clean Code", price: 30 },
-  { id: 2, title: "You Don't Know JS", price: 25 }
+  { id: 1, title: "Mathematics", price: 30 },
+  { id: 2, title: "Biology", price: 25 }
 ];
 
 export const getAllBooks = (req, res) => {
