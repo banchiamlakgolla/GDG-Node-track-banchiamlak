@@ -36,9 +36,15 @@ E-commerce-mini-project/
 - Mongoose
 - Postman
 
-MONGO_URI=mongodb+srv://E-co:123456ab@ecomercecluster0.34nu3qg.mongodb.net/?appName=ecomerceCluster0
+MONGO_URI=<your MongoDB Atlas connection string>(mongodb+srv://...)
 PORT=5000
 
+## How to Run
+1. Install dependencies:
+  ``bash
+   npm install``
+3. Start the server:
+    ``npm start``
 # API Endpoints
 Products
   GET /products
