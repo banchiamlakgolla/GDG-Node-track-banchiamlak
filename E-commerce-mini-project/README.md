@@ -1,4 +1,4 @@
-# Mini Project – E-commerce Backend API
+# E-commerce-mini-project
 
 ## Overview
 This project is a simple E-commerce backend API built using Node.js, Express, and MongoDB Atlas.
