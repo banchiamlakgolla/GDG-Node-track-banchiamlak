@@ -41,25 +41,39 @@ PORT=5000
 
 ## How to Run
 1. Install dependencies:
-  ``bash
-   npm install``
+  ``npm install``
 3. Start the server:
     ``npm start``
 # API Endpoints
 Products
+
   GET /products
+  
   GET /products/:id
+  
   POST /products
+  
   PUT /products/:id
+  
   DELETE /products/:id
 Cart
+
   GET /cart
+  
   POST /cart
+  
   PUT /cart
+  
   DELETE /cart/:productId
+  
 Orders
+
   POST /orders
+  
   GET /orders
+  
   GET /orders/:id
+  
 -All endpoints are tested using Postman
+
 -The Postman collection is included as E-commerce backend - mini project.postman_collection  
