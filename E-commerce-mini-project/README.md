@@ -36,7 +36,7 @@ E-commerce-mini-project/
 - Mongoose
 - Postman
 
-MONGO_URI=<your MongoDB Atlas connection string>(mongodb+srv://...)
+MONGO_URI=your MongoDB Atlas connection string
 PORT=5000
 
 ## How to Run
